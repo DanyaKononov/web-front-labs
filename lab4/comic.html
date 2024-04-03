@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Кононов Данил Александрович. Лабораторная работа 4</title>
+    <style>
+        #c1 {
+            border: 2px solid blue;
+            box-shadow: 0 0 15px aqua;
+            height: 50px;
+            width: 100px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            display: none;
+            top: -250px;
+            left: 420px;
+        }
+        #c2 {
+            border: 2px solid blue;
+            box-shadow: 0 0 15px aqua;
+            height: 70px;
+            width: 125px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            display: none;
+            top: -350px;
+            left: 510px;
+        }
+        #c3 {
+            border: 2px solid blue;
+            box-shadow: 0 0 15px aqua;
+            height: 90px;
+            width: 150px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            display: none;
+            top: -500px;
+            left: 600px;
+        }
+        #c4 {
+            border: 2px solid blue;
+            box-shadow: 0 0 15px aqua;
+            height: 110px;
+            width: 175px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            display: none;
+            top: -700px;
+            left: 700px;
+            text-align: center;
+            line-height: 110px;
+            color: black;
+        }
+
+        img:hover ~ #c1 {
+            display: block;
+        }
+
+        img:hover ~ #c2 {
+            display: block;
+        }
+
+        img:hover ~ #c3 {
+            display: block;
+        }
+
+        img:hover ~ #c4 {
+            display: block;
+            transition: 4s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 4
+    </header>
+
+    <main>
+        <img src="picture.jpg" width="1000px" height="600px">
+        <div id="c1"></div>
+        <div id="c2"></div>
+        <div id="c3"></div>
+        <div id="c4">Что происходит?</div>
+    </main>
+
+    <footer>
+        &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
