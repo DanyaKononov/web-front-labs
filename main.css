@@ -23,6 +23,7 @@ footer{
 a{
     color: green;
     text-decoration: none;
+    transition: 2s 1s;
 }
 
 a:link {
