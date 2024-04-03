@@ -19,6 +19,10 @@ footer{
     font-style: italic;
     font-size: 16pt;
     text-align: left;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 a{
     color: green;
@@ -61,4 +65,8 @@ div.menu:hover {
 
 h1 {
     text-align: center;
+}
+
+main {
+    margin: 10px 20px 45px;
 }
