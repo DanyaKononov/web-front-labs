@@ -39,9 +39,26 @@ a:visited {
 a:hover {
     color: lime;
     text-decoration: underline;
+    transition: 0.3s;
 }
 
 a:active {
     color: black;
     opacity: 0.3;
+}
+
+div.menu {
+    border: 7px solid goldenrod;
+    border-radius: 6px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+div.menu:hover {
+    background-color: wheat;
+    box-shadow: 0 0 15px lightseagreen;
+}
+
+h1 {
+    text-align: center;
 }
