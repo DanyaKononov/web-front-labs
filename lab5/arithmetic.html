@@ -14,8 +14,14 @@
             let result = a + b;
             alert('Сумма '+ a +' и '+ b +' равна ' + result);
         }
-
-        showSum();
+        function showAuthor() {
+            let author = 'Автор страницы:\nКононов Данил Александрович';
+            alert(author);
+        }
+        function showHello() {
+            let hello = 'Добрый день!\nВперёд к успеху!'
+            alert(hello)
+        }
     </script>
     <style>
         .message{
@@ -33,6 +39,9 @@
             vertical-align: top;
             cursor: pointer;
         }
+        footer{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -43,11 +52,11 @@
         <div class="message" onclick="showSum()">
             Сколько будет 5154+7891?
         </div>
-        <div class="message">
+        <div class="message" onclick="showAuthor()">
             Узнать, кто автор странцы
         </div>
     </main>
-    <footer>
+    <footer ondblclick="showHello()">
         &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
     </footer>
 </body>
