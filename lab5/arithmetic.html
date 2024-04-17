@@ -52,6 +52,13 @@
             let hello = 'Добрый день!\nВперёд к успеху!'
             alert(hello)
         }
+        function changeOutput(buttonNum, backColor, textColor, borderSize) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.border = borderSize;
+        }
     </script>
     <style>
         .message{
@@ -71,6 +78,11 @@
         }
         footer{
             cursor: pointer;
+        }
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -95,6 +107,15 @@
         </div>
         <div class="message" onclick="showAuthor()">
             Узнать, кто автор странцы
+        </div>
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', '5px solid')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', '10px solid')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'aqua', 'orange', '15px solid')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'yellow', 'blue', '20px solid')">
+        </div>
+        <div id="output">
+
         </div>
     </main>
     <footer ondblclick="showHello()">
