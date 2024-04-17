@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Кононов Данил Александрович. Лабораторная работа 5</title>
+    <script>
+        function blurChange() {
+            let value = document.getElementById('blurValue').value + 'px';
+            document.getElementById('blurOutput').innerText = value;
+            document.getElementById('blurImage').style.filter = 'blur('+ value +')'
+        }
+    </script>
+    <style>
+        img {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+    <main>
+        <div>
+            Фильтр blur:
+            <input type="range" value="0" min="0" max="20" onchange="blurChange()" id="blurValue">
+            <span id="blurOutput"></span>
+        </div>
+        <div>
+            <img src="Stalcraft.jpg" id="blurImage">
+        </div>
+    </main>
+    <footer>
+        &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
