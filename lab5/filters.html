@@ -38,6 +38,11 @@
             document.getElementById('invertOutput').innerText = value;
             document.getElementById('blurImage').style.filter = 'invert('+ value +')'
         }
+        function saturateChange() {
+            let value = document.getElementById('saturateValue').value + '%';
+            document.getElementById('saturateOutput').innerText = value;
+            document.getElementById('blurImage').style.filter = 'saturate('+ value +')'
+        }
     </script>
     <style>
         img {
@@ -79,6 +84,11 @@
             Фильтр invert:
             <input type="range" value="0" min="0" max="100" onchange="invertChange()" id="invertValue">
             <span id="invertOutput"></span><br>
+        </div>
+        <div>
+            Фильтр saturate:
+            <input type="range" value="100" min="0" max="500" onchange="saturateChange()" id="saturateValue">
+            <span id="saturateOutput"></span><br>
         </div>
         <div>
             <img src="Stalcraft.jpg" id="blurImage">
