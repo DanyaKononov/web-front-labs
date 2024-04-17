@@ -28,6 +28,11 @@
             document.getElementById('grayscaleOutput').innerText = value;
             document.getElementById('blurImage').style.filter = 'grayscale('+ value +')'
         }
+        function huerotateChange() {
+            let value = document.getElementById('huerotateValue').value + 'deg';
+            document.getElementById('huerotateOutput').innerText = value;
+            document.getElementById('blurImage').style.filter = 'hue-rotate('+ value +')'
+        }
     </script>
     <style>
         img {
@@ -59,6 +64,11 @@
             Фильтр grayscale:
             <input type="range" value="0" min="0" max="100" onchange="grayscaleChange()" id="grayscaleValue">
             <span id="grayscaleOutput"></span><br>
+        </div>
+        <div>
+            Фильтр hue-rotate:
+            <input type="range" value="0" min="0" max="360" onchange="huerotateChange()" id="huerotateValue">
+            <span id="huerotateOutput"></span><br>
         </div>
         <div>
             <img src="Stalcraft.jpg" id="blurImage">
