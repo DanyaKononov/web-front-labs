@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Кононов Данил Александрович. Лабораторная работа 5</title>
+    <script>
+        function cartSum() {
+            let inputApple = document.getElementById('numberApple');
+            let inputOrange = document.getElementById('numberOrange');
+            let inputMelon = document.getElementById('numberMelon');
+            let inputWatermelon = document.getElementById('numberWatermelon');
+            let inputPear = document.getElementById('numberPear');
+            let apple = parseInt(inputApple.value);
+            let orange = parseInt(inputOrange.value);
+            let melon = parseInt(inputMelon.value);
+            let watermelon = parseInt(inputWatermelon.value);
+            let pear = parseInt(inputPear.value);
+            let result = (apple*50) + (orange*60) + (melon*70) + (watermelon*80) + (pear*90);
+            let output = document.getElementById('output');
+            output.innerHTML = 'К оплате: ' + result + 'р.';
+        }
+        function clearCart() {
+            output.innerHTML = '';
+            numberApple.value = '';
+            numberOrange.value = '';
+            numberMelon.value = '';
+            numberWatermelon.value = '';
+            numberPear.value = '';
+        }
+    </script>
+    <style>
+        .cart {
+            border: 1px solid;
+            border-radius: 5px;
+            width: 240px;
+            height: 370px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            color: lightseagreen;
+        }
+        h1 {
+            font-size: 20pt;
+        }
+        .button {
+            padding-top: 10px;
+        }
+        .orange {
+            padding-top: 10px;
+        }
+        .melon {
+            padding-top: 10px;
+        }
+        .watermelon {
+            padding-top: 10px;
+        }
+        .pear {
+            padding-top: 10px;
+        }
+        #output {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+    <main>
+        <div class="cart">
+            <h1>Корзина товаров</h1>
+            <div class="fruits">
+                <div class="apple">
+                    Яблоки (50р/шт):
+                    <label><input type="number" value="" id="numberApple" placeholder="Количество" min="0" onkeydown="return event.key !== '-'"></label>
+                </div>
+                <div class="orange">
+                    Апельсины (60р/шт):
+                    <label><input type="number" value="" id="numberOrange" placeholder="Количество" min="0" onkeydown="return event.key !== '-'"></label>
+                </div>
+                <div class="melon">
+                    Дыня (70р/шт):
+                    <label><input type="number" value="" id="numberMelon" placeholder="Количество" min="0" onkeydown="return event.key !== '-'"></label>
+                </div>
+                <div class="watermelon">
+                    Арбуз (80р/шт):
+                    <label><input type="number" value="" id="numberWatermelon" placeholder="Количество" min="0" onkeydown="return event.key !== '-'"></label>
+                </div>
+                <div class="pear">
+                    Груша (90р/шт):
+                    <label><input type="number" value="" id="numberPear" placeholder="Количество" min="0" onkeydown="return event.key !== '-'"></label>
+                </div>
+            </div>    
+            <div class="button">
+                <input type="button" value="Расчитать" onclick="cartSum()">
+                <input type="button" value="Очистить" onclick="clearCart()">
+            </div>
+            <div id="output">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
