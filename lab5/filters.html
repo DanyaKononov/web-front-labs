@@ -33,6 +33,11 @@
             document.getElementById('huerotateOutput').innerText = value;
             document.getElementById('blurImage').style.filter = 'hue-rotate('+ value +')'
         }
+        function invertChange() {
+            let value = document.getElementById('invertValue').value + '%';
+            document.getElementById('invertOutput').innerText = value;
+            document.getElementById('blurImage').style.filter = 'invert('+ value +')'
+        }
     </script>
     <style>
         img {
@@ -69,6 +74,11 @@
             Фильтр hue-rotate:
             <input type="range" value="0" min="0" max="360" onchange="huerotateChange()" id="huerotateValue">
             <span id="huerotateOutput"></span><br>
+        </div>
+        <div>
+            Фильтр invert:
+            <input type="range" value="0" min="0" max="100" onchange="invertChange()" id="invertValue">
+            <span id="invertOutput"></span><br>
         </div>
         <div>
             <img src="Stalcraft.jpg" id="blurImage">
