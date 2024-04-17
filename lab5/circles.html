@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Кононов Данил Александрович. Лабораторная работа 5</title>
+    <script>
+        function deleteCircles(number) {
+            let circle = document.getElementById('c' + number);
+            circle.style.transition = 'transform 1s';
+            circle.style.transform = 'scale(0)';
+        }
+        function againCircles() {
+            let circle1 = document.getElementById('c1');
+            let circle2 = document.getElementById('c2');
+            let circle3 = document.getElementById('c3');
+            let circle4 = document.getElementById('c4');
+            let circle5 = document.getElementById('c5');
+            let circle6 = document.getElementById('c6');
+            let circle7 = document.getElementById('c7');
+            let circle8 = document.getElementById('c8');
+            let circle9 = document.getElementById('c9');
+            let circle10 = document.getElementById('c10');
+            circle1.style.transform = 'scale(1)';
+            circle2.style.transform = 'scale(1)';
+            circle3.style.transform = 'scale(1)';
+            circle4.style.transform = 'scale(1)';
+            circle5.style.transform = 'scale(1)';
+            circle6.style.transform = 'scale(1)';
+            circle7.style.transform = 'scale(1)';
+            circle8.style.transform = 'scale(1)';
+            circle9.style.transform = 'scale(1)';
+            circle10.style.transform = 'scale(1)';
+
+        }
+    </script>
+    <style>
+        .button {
+            padding-top: 10px;
+        }
+        #c1 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: white;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 544px;
+            top: 70px;
+        }
+        #c2 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: yellow;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 200px;
+            top: 100px;
+        }
+        #c3 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 600px;
+            top: 200px;
+        }
+        #c4 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: red;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 800px;
+            top: 200px;
+        }
+        #c5 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: peru;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 270px;
+            top: 170px;
+        }
+        #c6 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: plum;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 750px;
+            top: 123px;
+        }
+        #c7 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: purple;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 400px;
+            top: 100px;
+        }
+        #c8 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 333px;
+            top: 222px;
+        }
+        #c9 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: blue;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 700px;
+            top: 230px;
+        }
+        #c10 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: brown;
+            color: black;
+            text-align: center;
+            font-size: 30pt;
+            position: absolute;
+            left: 450px;
+            top: 250px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+    <main>
+        <div class="circles">
+            <div id="c1" onclick="deleteCircles(1)">1</div>
+            <div id="c2" onclick="deleteCircles(2)">2</div>
+            <div id="c3" onclick="deleteCircles(3)">3</div>
+            <div id="c4" onclick="deleteCircles(4)">4</div>
+            <div id="c5" onclick="deleteCircles(5)">5</div>
+            <div id="c6" onclick="deleteCircles(6)">6</div>
+            <div id="c7" onclick="deleteCircles(7)">7</div>
+            <div id="c8" onclick="deleteCircles(8)">8</div>
+            <div id="c9" onclick="deleteCircles(9)">9</div>
+            <div id="c10" onclick="deleteCircles(10)">10</div>
+        </div>
+        <div class="button">
+            <input type="button" value="Заново" onclick="againCircles()"> 
+        </div>
+    </main>
+    <footer>
+        &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
