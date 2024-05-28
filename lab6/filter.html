@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Кононов Данил Александрович. Лабораторная работа 6</title>
+		<script>
+			function filter() {
+				let color = document.getElementById('wear-color').value;
+				let type = document.getElementById('wear-type').value
+				let wear = document.getElementById('wear');
+
+				if(color == 'Красный' && type == 'Футболка') {
+					wear.src = 'RedF.jpg';
+				}
+				else if(color == 'Белый' && type == 'Футболка') {
+					wear.src = 'WhiteF.jpg';
+				}
+				else if(color == 'Чёрный' && type == 'Футболка') {
+					wear.src = 'BlackF.jpg';
+				}
+				else if(color == 'Красный' && type == 'Поло') {
+					wear.src = 'RedP.jpg';
+				}
+				else if(color == 'Белый' && type == 'Поло') {
+					wear.src = 'WhiteP.jpg';
+				}
+				else if(color == 'Чёрный' && type == 'Поло') {
+					wear.src = 'BlackP.jpg';
+				}
+				else if(color == 'Красный' && type == 'Майка') {
+					wear.src = 'RedM.jpg';
+				}
+				else if(color == 'Белый' && type == 'Майка') {
+					wear.src = 'WhiteM.jpg';
+				}
+				else if(color == 'Чёрный' && type == 'Майка') {
+					wear.src = 'BlackM.jpg';
+				}
+			}
+		</script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+    <main>
+			<div>
+				Цвет одежды:
+				<select id="wear-color">
+					<option>Красный</option>
+					<option>Белый</option>
+					<option>Чёрный</option>
+				</select><br>
+
+				Тип одежды:
+				<select id="wear-type">
+					<option>Футболка</option>
+					<option>Поло</option>
+					<option>Майка</option>
+				</select><br>
+
+				<button onclick="filter()">ОК</button><br>
+
+				<img id="wear">
+			</div>
+    </main>
+    <footer>
+        &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
