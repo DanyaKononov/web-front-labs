@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Кононов Данил Александрович. Лабораторная работа 7</title>
+		<script>
+			function getweather8(){
+				const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.9346&hourly=temperature_2m&timezone=Asia%2FBangkok';
+				fetch(url)
+				.then(function(response){
+					return response.json()
+				})
+				.then(function(json){
+					let output = document.getElementById('output')
+					let weather = json.hourly.temperature_2m;
+					output.innerText = weather[8] + " °C"
+				})
+			}
+			function getweather12(){
+				const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.9346&hourly=temperature_2m&timezone=Asia%2FBangkok';
+				fetch(url)
+				.then(function(response){
+					return response.json()
+				})
+				.then(function(json){
+					let output = document.getElementById('output')
+					let weather = json.hourly.temperature_2m;
+					output.innerText = weather[12] + " °C"
+				})
+			}
+			function getweather20(){
+				const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.9346&hourly=temperature_2m&timezone=Asia%2FBangkok';
+				fetch(url)
+				.then(function(response){
+					return response.json()
+				})
+				.then(function(json){
+					let output = document.getElementById('output')
+					let weather = json.hourly.temperature_2m;
+					output.innerText = weather[20] + " °C"
+				})
+			}
+	</script>
+
+	<style>
+			.bord{
+				border: 3px solid limegreen;
+				border-radius: 15px;
+				width: 500px;
+				height: 400px;
+				background-color: lightseagreen;
+				color: black;
+				font-size: 15pt;
+				padding: 10px;
+			}
+			.button{
+				border: 2px solid limegreen;
+				background-color: slategray;
+				border-radius: 15px;
+				width: 120px;
+				height: 50px;
+				margin-top: 50px;
+				cursor: pointer;
+				margin-left: 25px;
+				font-size: 12pt;
+			}
+			.bord2{
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+			}
+			#output{
+				width: 250px;
+				height: 200px;
+				display: flex;
+				position: absolute;
+				border: 2px solid limegreen;
+				border-radius: 10px;
+				margin-left: 200px;
+				top: 165px;
+				align-items: center;
+				justify-content: center;
+				color: black;
+				background-color: slategray;
+				font-size: 20pt;
+			}
+	</style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+    <main>
+			<div class="bord">
+				<div style="text-align: center;">Погода в Новосибиске</div>
+				<div class="bord2">
+					<button onclick="getweather8()" class="button">8 утра</button>
+					<button onclick="getweather12()" class="button">12 дня</button>
+					<button onclick="getweather20()" class="button">20 вечера</button>
+				</div>
+				<div id="output">Погода</div>
+		</div>
+    </main>
+    <footer>
+        &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
