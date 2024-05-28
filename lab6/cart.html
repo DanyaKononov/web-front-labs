@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Кононов Данил Александрович. Лабораторная работа 6</title>
+		<script>
+			function mainfunc(){
+					let balance = document.getElementById('balance').value;
+
+					let cart1 = document.getElementById('cart1').value;
+					let cart2 = document.getElementById('cart2').value;
+					let cart3 = document.getElementById('cart3').value;
+					let cart4 = document.getElementById('cart4').value;
+					let cart5 = document.getElementById('cart5').value;
+					let cart6 = document.getElementById('cart6').value;
+					let cart7 = document.getElementById('cart7').value;
+
+					balance = parseInt(balance)
+					cart1 = parseInt(cart1);
+					cart2 = parseInt(cart2);
+					cart3 = parseInt(cart3);
+					cart4 = parseInt(cart4);
+					cart5 = parseInt(cart5);
+					cart6 = parseInt(cart6);
+					cart7 = parseInt(cart7);
+					 
+					let output = document.getElementById('output')
+					let outputcost = document.getElementById('output-cost');
+					
+					if(isNaN(cart1)){
+							cart1 = 0;
+					}
+					if(isNaN(cart2)){
+							cart2 = 0;
+					}
+					if(isNaN(cart3)){
+							cart3 = 0;
+					}
+					if(isNaN(cart4)){
+							cart4 = 0;
+					}
+					if(isNaN(cart5)){
+							cart5 = 0;
+					}
+					if(isNaN(cart6)){
+							cart6 = 0;
+					}
+					if(isNaN(cart7)){
+							cart7 = 0;
+					}
+
+					if (isNaN(balance)){
+							output.innerHTML = "Введите число!"
+					}
+					else if(cart1 == 0 && cart2 == 0 && cart3 == 0 && cart4 == 0 && cart5 == 0 && cart6 == 0 && cart7 == 0){
+							output.innerHTML = "Выбирите хотябы 1 товар!!!";
+					}
+					else if(cart1 < 0 || cart2 < 0 ||  cart3 < 0 ||  cart4 < 0 ||  cart5 < 0 ||  cart6 < 0 ||  cart7 < 0){
+							output.innerHTML = "Вы ввели отрицательное число!!!";
+					}
+					else if(((90*cart1)+(40*cart2)+(40*cart3)+(150*cart4)+(500*cart5)+(750*cart6)+(120*cart7))>balance){
+							outputcost.innerHTML = "Итоговая стоимость: "+((90*cart1)+(40*cart2)+(40*cart3)+(150*cart4)+(500*cart5)+(750*cart6)+(120*cart7))
+							output.innerHTML = "Недостаточно средств"
+					}
+					else{
+							outputcost.innerHTML = "Итоговая стоимость: "+((90*cart1)+(40*cart2)+(40*cart3)+(150*cart4)+(500*cart5)+(750*cart6)+(120*cart7))
+							output.innerHTML = ""
+					}
+			}
+	</script>
+	<style>
+			tr{
+					text-align: center;
+			}
+			.TableNames{
+					font-weight: bold;
+					font-size: 25px;
+			}
+			table{
+					margin-bottom: 20px;
+			}
+			#output{
+					margin-top: 20px;
+			}
+	</style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+		<main>
+			<label>Мой баланс: <input type="number" value="100" id="balance"></label><br>
+
+			<table border>
+
+					<tr class="TableNames">
+							<td></td>
+							<td>Название</td>
+							<td>Цена</td>
+							<td>Количество</td>
+					</tr>
+
+					<tr>
+							<td>1</td>
+							<td>Булочка с повидлом</td>
+							<td>35р</td>
+							<td><input type="number" value="" id="cart1"></td>
+
+					</tr>
+
+					<tr>
+							<td>2</td>
+							<td>Булочка с кортошкой</td>
+							<td>45р</td>
+							<td><input type="number" value="" id="cart2"></td>
+
+					</tr>
+
+					<tr>
+							<td>3</td>
+							<td>Булочка с сосиской</td>
+							<td>55р</td>
+							<td><input type="number" value="" id="cart3"></td>
+					</tr>
+					<tr>
+							<td>4</td>
+							<td>Булочка с мясом</td>
+							<td>70р</td>
+							<td><input type="number" value="" id="cart4"></td>
+					</tr>
+					<tr>
+							<td>5</td>
+							<td>Булочка с капустой</td>
+							<td>60р</td>
+							<td><input type="number" value="" id="cart5"></td>
+					</tr>
+					<tr>
+							<td>6</td>
+							<td>Булочка с яйцом и луком</td>
+							<td>50р</td>
+							<td><input type="number" value="" id="cart6"></td>
+					</tr>
+					<tr>
+							<td>7</td>
+							<td>Трубочка со сгущёнкой</td>
+							<td>40р</td>
+							<td><input type="number" value="" id="cart7"></td>
+					</tr>
+
+			</table>
+
+			<button onclick="mainfunc()">OK</button>
+			<div id="output-cost" style="margin-top: 20px;"></div>
+			<div id="output" style="color: red; font-size: 20px;"></div>
+	</main>
+    <footer>
+        &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
