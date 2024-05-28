@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Кононов Данил Александрович. Лабораторная работа 6</title>
+		<script>
+			function ChangeColor(div){
+					if (div.style.backgroundColor == "yellow"){
+							div.style.backgroundColor = 'red';
+							document.getElementById('word-color').innerHTML = 'красный';
+							div.style.color = "white";
+					
+					} 
+					else if(div.style.backgroundColor == 'red'){
+							div.style.backgroundColor = 'green';
+							document.getElementById('word-color').innerHTML = 'Зеленый';
+							div.style.color = "black";
+
+					}
+					else if(div.style.backgroundColor == 'green'){
+							div.style.backgroundColor = 'white';
+							document.getElementById('word-color').innerHTML = 'Белый';
+							div.style.color = "red";
+
+					}
+					else if(div.style.backgroundColor == 'white'){
+							div.style.backgroundColor = 'aqua';
+							document.getElementById('word-color').innerHTML = '';
+							div.style.color = "black";
+
+					}
+					else {
+							div.style.backgroundColor = 'yellow';
+							document.getElementById('word-color').innerHTML = 'желтый';
+					}
+					div.style.transition = "background-color 0.3s, color 0.3s";
+	}
+	</script>
+	<style>
+			.color{
+					border: 1px solid blue;
+					border-radius: 10px;
+					background-color: yellow;
+					width: 1000px;
+					height: 650px;
+					text-align: center;
+					line-height: 700px;
+					font-size: 30px;
+					color: rgb(1, 1, 20);
+					cursor: pointer;
+					
+			}
+	</style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+    <main>
+			<div class="color" ondblclick="ChangeColor(this)">
+					Цвет: <span id="word-color"> желтый </span> нажмите два раза, что бы сменить цвет
+			</div>
+	</main>
+    <footer>
+        &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
