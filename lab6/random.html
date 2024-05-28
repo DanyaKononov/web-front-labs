@@ -15,6 +15,15 @@
     		margin: 20px auto;
 				padding: 20px;
 				text-align: center;
+				background-color: beige;
+			}
+			#rules1,#rules2 {
+				border: 2px solid limegreen;
+    		border-radius: 26px;
+    		width: 300px;
+				padding: 20px;
+				background-color: beige;
+				position: absolute;
 			}
 		</style>
 		<script>
@@ -66,6 +75,16 @@
 					document.getElementById('result').innerHTML = "";
 					count = 0;
 					number = Math.floor(Math.random() * 100)+1;
+					
+			}
+
+			function ShowRules(){
+					document.getElementById('rules1').style.display='none'
+					document.getElementById('rules2').style.display='block'
+			}
+			function HideRules(){
+					document.getElementById('rules1').style.display='block'
+					document.getElementById('rules2').style.display='none'
 			}
 	</script>
 </head>
@@ -80,6 +99,25 @@
 					<button onclick="StartGame()">
 							Сыграть в игру
 					</button>
+			</div>
+
+			<div class="rules" id="rules1">
+					<button onclick="ShowRules()">
+							Показать правила игры
+					</button>
+			</div>
+			<div style="display: none;" id="rules2">
+					<button onclick="HideRules()">
+							Скрыть правила игры<br>
+					</button>
+					<ol type="A">
+							<li>Просим вас</li>
+							<li>не использовать</li>
+							<li>инструменты разработчика!</li>
+							<li>В остальном</li>
+							<li>правил нет!</li>
+							<li>Удачи!</li>
+					</ol>
 			</div>
 
 			<div class="game" style="display: none;">
