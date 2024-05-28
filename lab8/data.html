@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../main.css">
+		<script src="lab8.js"></script>
     <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
     <title>Кононов Данил Александрович. Лабораторная работа 8</title>
+		<style>
+			.date {
+				font-size: 15pt;
+				color: black;
+				
+			}
+		</style>
 </head>
-<body>
+<body onload="showDate()">
     <header>
         НГТУ, ФБ, Лабораторная работа 8
     </header>
     <main>
-			<ul>
-				<li><a href="blocks.html">Добавление блоков</a></li>
-				<li><a href="dollar.html">Курс доллара</a></li>
-				<li><a href="magnet.html">Котировки акций магазина Магнит</a></li>
-				<li><a href="euru.html">Курс евро</a></li>
-				<li><a href="weather.html">Погода</a></li>
-		</ul>
+			<div class="date">
+				<div id="current-dateR"></div>
+				<div id="current-dateA"></div>
+				<div id="current-dateE"></div>
+				<div id="current-dateS"></div>
+				<div id="current-dateF"></div>
+				<div id="current-dateI"></div>
+			</div>
     </main>
     <footer>
         &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
