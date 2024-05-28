@@ -7,18 +7,31 @@
     <link rel="shortcut icon" href="../favicon-16x16.png" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
     <title>Кононов Данил Александрович. Лабораторная работа 7</title>
+		<script>
+			function addNewBlock() {
+				let newBlock = document.createElement('div');
+				newBlock.style.backgroundColor = 'green';
+				newBlock.style.height = '40px';
+
+				document.querySelector('main').appendChild(newBlock);
+			}
+		</script>
+		<style>
+			div {
+				border: 2px solid;
+				border-radius: 15px;
+				border-color: aqua;
+				padding: 10px;
+				margin: 10px;
+			}
+		</style>
 </head>
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 7
     </header>
     <main>
-			<ul>
-				<li><a href="random.html">Угадай число</a></li>
-				<li><a href="color.html">Перебор цветов</a></li>
-				<li><a href="filter.html">Фильтр товаров</a></li>
-				<li><a href="cart.html">Корзина товаров</a></li>
-		</ul>
+			<button onclick="addNewBlock()">Добавить блок</button>
     </main>
     <footer>
         &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
