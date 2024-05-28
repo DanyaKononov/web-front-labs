@@ -12,61 +12,110 @@
         let newBlock = document.createElement('div');
         newBlock.style.backgroundColor = 'green';
         newBlock.style.height = '40px';
-        newBlock.style.border = 'solid 5px aqua'
-        newBlock.style.borderRadius = '10px'
-        newBlock.style.margin = '10px'
+        newBlock.style.border = 'solid 5px aqua';
+        newBlock.style.borderRadius = '10px';
+        newBlock.style.margin = '10px';
         document.querySelector('main').appendChild(newBlock);
 			}
 
         function addNewBlocks(){
-          let main = document.querySelector('main')
+          let main = document.querySelector('main');
           let number = document.getElementById('count').value;
-          number = parseInt(number)
+          number = parseInt(number);
           for (let i = 0; i < number; i++){
               let newBlock = document.createElement('div');
               newBlock.style.backgroundColor = 'green';
               newBlock.style.height = '40px';
-              newBlock.style.border = 'solid 5px aqua'
-              newBlock.style.borderRadius = '10px'
-              newBlock.style.margin = '10px'
-              widthBlocks = (i+15) + '0px'
-              newBlock.style.width = widthBlocks
+              newBlock.style.border = 'solid 5px aqua';
+              newBlock.style.borderRadius = '10px';
+              newBlock.style.margin = '10px';
+              widthBlocks = (i+15) + '0px';
+              newBlock.style.width = widthBlocks;
               newBlock.innerHTML = `Блок № ${i+1}: 2*${i+1}<sup>2</sup> = ${2*(i+1)**2}`;
               main.appendChild(newBlock);
             }
         }
 
         function add20_50(){
-          let main = document.querySelector('main')
+          let main = document.querySelector('main');
           for (let i = 20; i <= 50; i+= 2.5){
               let newBlock = document.createElement('div');
               newBlock.style.backgroundColor = 'lime';
               newBlock.style.height = '50px';
-              newBlock.style.border = 'solid 5px aqua'
-              newBlock.style.borderRadius = '10px'
-              newBlock.style.margin = '2px'
-              newBlock.style.width = "100px"
+              newBlock.style.border = 'solid 5px aqua';
+              newBlock.style.borderRadius = '10px';
+              newBlock.style.margin = '2px';
+              newBlock.style.width = "100px";
               newBlock.innerHTML = `${i}`;
         			main.appendChild(newBlock);
 						}
 				}
 				function add10_80(){
-          let main = document.querySelector('main')
-
+          let main = document.querySelector('main');
+          let flexContainer = document.createElement('div');
+          flexContainer.style.display = 'flex';
           main.appendChild(flexContainer)
           for (let i = 10; i >=-80 ; i-= 3){
               let newBlock = document.createElement('div');
               newBlock.style.backgroundColor = 'pink';
-              newBlock.style.display = 'flex'
-              newBlock.style.alignItems = 'center'
+              newBlock.style.display = 'flex';
+              newBlock.style.alignItems = 'center';
               newBlock.style.height = '20px';
-              newBlock.style.border = 'solid 5px aqua'
-              newBlock.style.borderRadius = '50%'
-              newBlock.style.margin = '5px'
-              newBlock.style.textAlign = 'center'
+              newBlock.style.border = 'solid 5px aqua';
+              newBlock.style.borderRadius = '50%';
+              newBlock.style.margin = '5px';
+              newBlock.style.textAlign = 'center';
               newBlock.innerHTML = `${i}`;
               flexContainer.appendChild(newBlock);
             }
+				}
+
+				function opacityBlock(){
+          let main = document.querySelector('main');
+          for (let i = 0; i <= 10 ; i+= 1){
+            let newBlock = document.createElement('div');
+            newBlock.style.backgroundColor = 'gold';
+            newBlock.style.height = '20px';
+            newBlock.style.border = 'solid 5px aqua';
+            newBlock.style.margin = '10px';
+						newBlock.style.borderRadius = '15px';
+            newBlock.style.opacity =  i * 0.1;
+            newBlock.innerHTML = `${i}`;
+            main.appendChild(newBlock);
+					}
+				}
+
+				function add_red_green(){
+          let main = document.querySelector('main');
+          let number = document.getElementById('colors').value;
+          number = parseInt(number);
+          let flexContainer = document.createElement('div');
+          flexContainer.style.display = 'flex';
+          main.appendChild(flexContainer);
+
+          for (let i = number; i >= 1; i -= 1){
+            let newBlock = document.createElement('div');
+            if (i % 2 == 0){
+              newBlock.style.backgroundColor = "green";
+              newBlock.style.margin = '10px';
+              newBlock.style.height = '20px';
+              newBlock.style.border = 'solid 5px aqua';
+              newBlock.style.borderRadius = '50%';
+              newBlock.style.textAlign = 'center';
+              newBlock.innerHTML = `${i}`;
+              flexContainer.appendChild(newBlock);
+            }
+            else{
+              newBlock.style.backgroundColor = "red";
+              newBlock.style.margin = '10px';
+              newBlock.style.height = '20px';
+              newBlock.style.border = 'solid 5px aqua';
+              newBlock.style.borderRadius = '50%';
+              newBlock.style.textAlign = 'center';
+              newBlock.innerHTML = `${i}`;
+              flexContainer.appendChild(newBlock);
+						}
+					}
 				}
 		</script>
 		<style>
@@ -87,6 +136,9 @@
 			<input type="number" value="100" id="count"></label>
 			<button onclick="add20_50()">20 => 50</button>
 			<button onclick="add10_80()">10 => -80</button>
+			<button onclick="opacityBlock()">opacityBlock</button>
+			<input type="number" value="0" id="colors"></input>
+			<button onclick="add_red_green()">Цветные круги</button>
     </main>
     <footer>
         &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
