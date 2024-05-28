@@ -26,3 +26,14 @@ function showDate() {
   weak.innerHTML = "Текущий день недели: " + weakkk[dt.getDay()];
 }
 
+function showWeak(){
+  let day = document.getElementById('day').value
+  let month = document.getElementById('month').value - 1
+  let year = document.getElementById('year').value
+  let output = document.getElementById('OPWeak')
+  let dt = new Date(year,month,day);
+  let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+  output.innerHTML = days[dt.getDay()+1]
+}
+
+
