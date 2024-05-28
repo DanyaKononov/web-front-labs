@@ -50,6 +50,24 @@
         			main.appendChild(newBlock);
 						}
 				}
+				function add10_80(){
+          let main = document.querySelector('main')
+
+          main.appendChild(flexContainer)
+          for (let i = 10; i >=-80 ; i-= 3){
+              let newBlock = document.createElement('div');
+              newBlock.style.backgroundColor = 'pink';
+              newBlock.style.display = 'flex'
+              newBlock.style.alignItems = 'center'
+              newBlock.style.height = '20px';
+              newBlock.style.border = 'solid 5px aqua'
+              newBlock.style.borderRadius = '50%'
+              newBlock.style.margin = '5px'
+              newBlock.style.textAlign = 'center'
+              newBlock.innerHTML = `${i}`;
+              flexContainer.appendChild(newBlock);
+            }
+				}
 		</script>
 		<style>
 			div {
@@ -68,6 +86,7 @@
 			<button onclick="addNewBlocks()">Добавить блоки</button>
 			<input type="number" value="100" id="count"></label>
 			<button onclick="add20_50()">20 => 50</button>
+			<button onclick="add10_80()">10 => -80</button>
     </main>
     <footer>
         &copy; Кононов Данил, ФБИ-21, 2 курс, 2024
