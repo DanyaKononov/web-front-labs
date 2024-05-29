@@ -1,0 +1,104 @@
+body {
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0px 500px 500px;
+}
+
+.logo {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	background-color: #FFF5EE;
+}
+
+.logo a {
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	padding: 10px;
+	background-color: #EAE6CA;
+}
+
+.nav-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none; /* Изначально скрыто */
+	flex-direction: column; /* Список вертикальный */
+	width: 100%;
+	text-align: center;
+}
+
+.nav-links li {
+	margin: 10px 0;
+}
+
+.nav-links a {
+	color: darkslategray;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+.burger {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 25px;
+}
+
+.burger div {
+	width: 100%;
+	height: 3px;
+	background-color: darkslategray;
+	transition: all 0.3s ease;
+}
+
+.burger.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+	color: darkslategray;
+}
+
+.burger.toggle .line2 {
+	opacity: 0;
+	color: darkslategray;
+}
+
+.burger.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+	color: darkslategray;
+}
+
+.nav-links.active {
+	display: flex; /* Отображение при активации */
+}
+
+
+
+.footer {
+	background-color: #222;
+	color: white;
+	padding: 20px 0;
+
+}
+
+.footer-content {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: justify;
+}
